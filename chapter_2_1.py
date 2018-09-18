@@ -56,3 +56,30 @@ print(x2[:2, :3]) # two rows, three columns
 print(x2[:3, ::2]) # all rows, every other column
 print(x2[::-1, ::-1]) # reverse array
 print(x2[:, 0]) # first column of x2
+print(x2[0, :]) # first row of x2
+print(x2[0]) # equivalent to x2[0, :])
+
+x2_sub = x2[:2, :2]
+print(x2_sub)
+
+x2_sub[0,0] = 99
+print(x2_sub)
+print(x2)
+
+x2_sub_copy = x2[:2, :2].copy()
+print(x2_sub_copy)
+
+x2_sub_copy[0, 0] = 42
+print(x2_sub_copy)
+print(x2)
+
+grid = np.arange(1,10).reshape((3,3))
+print(grid)
+
+x = np.array([1,2,3])
+print(x)
+print(x.reshape((1,3))) # row vector via reshape
+print(x[np.newaxis, :]) # row vector via newaxis
+print(x.reshape((3,1))) # column vector via reshape
+print(x[:, np.newaxis]) # column vector via newaxis
+
